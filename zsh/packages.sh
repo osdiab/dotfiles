@@ -9,7 +9,6 @@ brew install\
 		pyenv-virtualenv\
 		pyenv-virtualenvwrapper\
 		nvm\
-		jabba\
 		httpie
 
 echo ">> installing ruby version manager (rvm)\n"
@@ -18,5 +17,8 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 
 echo ">> installing go version manager (gvm)"
 \curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer
+
+echo ">> instaling jabba (java version manager)"
+\curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
 
 echo "done"

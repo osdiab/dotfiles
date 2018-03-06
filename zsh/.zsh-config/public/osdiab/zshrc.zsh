@@ -49,6 +49,9 @@ export NVM_DIR="$HOME/.nvm"
 # Ruby: Setup rvm
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Java: Setup jabba
+[ -s "/Users/omar/.jabba/jabba.sh" ] && source "/Users/omar/.jabba/jabba.sh"
+
 ##########
 # ZSH configuration
 ##########
