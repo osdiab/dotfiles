@@ -67,7 +67,9 @@ source "$ZSH_CONFIG/personal/project-helpers.zsh"
 #####################
 
 export ANDROID_HOME=${HOME}/Library/Android/sdk
+# export GENYMOTION_TOOLS="/Applications/Genymotion.app/Contents/MacOS/tools/"
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+# export PATH="${PATH}:${GENYMOTION_TOOLS}"
 export PATH=$PATH:$GOPATH/bin
 

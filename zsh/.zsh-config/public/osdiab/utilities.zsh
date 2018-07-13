@@ -11,8 +11,10 @@ alias clippy="pbcopy < "
 # convert relative to absolute path
 realpath () { case "$1" in /*)printf "%s\n" "$1";; *)printf "%s\n" "$PWD/$1";; esac; }
 
-alias adb=$HOME/Library/Android/sdk/platform-tools/adb
-alias aapt=$HOME/Library/Android/sdk/build-tools/23.0.3/aapt
+export ANDROID_HOME=${HOME}/Library/Android/sdk
+alias adb=$ANDROID_HOME/platform-tools/adb
+alias aapt=$ANDROID_HOME/build-tools/23.0.3/aapt
+alias emulator=$ANDROID_HOME/emulator/emulator
 
 # find nearest matching filename recursively up directory
 find-up () {
