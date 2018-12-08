@@ -4,7 +4,6 @@ brew install\
 		zsh\
 		antigen\
 		hub\
-		mercurial\
 		pyenv\
 		pyenv-virtualenv\
 		pyenv-virtualenvwrapper\
