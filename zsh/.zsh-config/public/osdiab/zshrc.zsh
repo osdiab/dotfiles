@@ -73,3 +73,8 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 # export PATH="${PATH}:${GENYMOTION_TOOLS}"
 export PATH=$PATH:$GOPATH/bin
 
+#################
+# Setup chxcode #
+#################
+source /usr/local/share/chxcode/chxcode
+source /usr/local/share/chxcode/auto

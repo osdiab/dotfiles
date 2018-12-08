@@ -21,4 +21,8 @@ echo ">> installing go version manager (gvm)"
 echo ">> instaling jabba (java version manager)"
 \curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
 
+echo ">> installing chxcode (XCode version manager)"
+brew tap klaaspieter/formula
+brew install chxcode
+
 echo "done"
