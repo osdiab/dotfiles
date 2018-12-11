@@ -23,7 +23,7 @@ augroup END
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 
 " Set mac clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Sets how many lines of history VIM has to remember
 set history=700
@@ -193,19 +193,24 @@ set mouse=a
 
 " Files, backups and undo {{{
 
+" Set working directory to current directory
+set autochdir
+
 set backupcopy=yes " allows webpack watch to work properly, by writing directly to file instead of replacing it
 set backup
-set backupdir=~/.vim/backup
-set directory=~/.vim/tmp
+if has('nvim')
+  set backupdir=~/.vim/backup
+  set directory=~/.vim/tmp
+else
+  set backupdir=~/.local/share/nvim/backup
+  set directory=~/.local/share/nvim/tmp
+endif
 
 " Source the vimrc file after saving it
 augroup sourcing
   autocmd!
-  if has('nvim')
-    autocmd bufwritepost init.vim source $MYVIMRC
-  else
-    autocmd bufwritepost .vimrc source $MYVIMRC
-  endif
+  autocmd bufwritepost init.vim source $MYVIMRC
+  autocmd bufwritepost .vimrc source $MYVIMRC
 augroup END
 
 " Open file prompt with current path
@@ -223,7 +228,6 @@ let g:ctrlp_custom_ignore = { 'dir': '\v[\/](.git|.cabal-sandbox|.stack-work)$' 
 " }}}
 
 " Text, tab and indent related {{{
-
 set tabstop=4
 
 " Linebreak on 100 characters
