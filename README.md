@@ -19,10 +19,10 @@ Lots of plugins, shortcuts, theming.
 
 Ensure [VimPlug](https://github.com/junegunn/vim-plug) is installed, then open Vim and run `:PlugInstall`.
 
-## iTerm2
-[Better Mac Terminal Emulator]().
+## Kitty
+[Better Mac Terminal Emulator](https://sw.kovidgoyal.net/kitty/).
 
-Includes color themes and some keyboard shortcuts. TODO: enumerate them
+Fast, open-source terminal emulator.
 
 ## Dash
 [Offline docs](https://kapeli.com/dash). Not much customization yet.
