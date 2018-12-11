@@ -19,6 +19,8 @@ zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
+eval "$(hub alias -s)"  # Alias hub as git
+
 #############################
 # Language version managers #
 #############################
@@ -30,14 +32,6 @@ eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 pyenv virtualenvwrapper
-
-eval "$(hub alias -s)"  # Alias hub as git
-# iterm2 shell integration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-#########
-# Version managers
-#########
 
 # Golang: Setup gvm
 source "$HOME/.gvm/scripts/gvm"
@@ -52,29 +46,25 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Java: Setup jabba
 [ -s "/Users/omar/.jabba/jabba.sh" ] && source "/Users/omar/.jabba/jabba.sh"
 
-##########
-# ZSH configuration
-##########
+# XCode: Setup chxcode
+source /usr/local/share/chxcode/chxcode
+source /usr/local/share/chxcode/auto
+
+##############################
+# External ZSH configuration #
+##############################
 
 # Import configs
 source "$ZSH_CONFIG/public/osdiab/utilities.zsh"
 # Personal configs, customize for yourself
-source "$ZSH_CONFIG/personal/env-vars.zsh"
-source "$ZSH_CONFIG/personal/project-helpers.zsh"
+# source "$ZSH_CONFIG/personal/env-vars.zsh"
+# source "$ZSH_CONFIG/personal/project-helpers.zsh"
 
 #####################
 # Add stuff to path #
 #####################
 
 export ANDROID_HOME=${HOME}/Library/Android/sdk
-# export GENYMOTION_TOOLS="/Applications/Genymotion.app/Contents/MacOS/tools/"
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-# export PATH="${PATH}:${GENYMOTION_TOOLS}"
 export PATH=$PATH:$GOPATH/bin
-
-#################
-# Setup chxcode #
-#################
-source /usr/local/share/chxcode/chxcode
-source /usr/local/share/chxcode/auto

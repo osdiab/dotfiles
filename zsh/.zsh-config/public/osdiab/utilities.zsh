@@ -101,3 +101,5 @@ pullall() {
   ls | xargs -P10 -I{} git -C {} pull
 }
 
+alias vim='nvim'
+
