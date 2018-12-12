@@ -13,6 +13,7 @@
 	echo "- nvm: Node version manager"
 	echo "- mercurial: Version control program, necessary for Go Version Manager (gvm)"
 	echo "- httpie: Command line HTTP client, alternative to curl/Postman"
+	echo "- jq: JSON processor for command line"
 	echo "- the_silver_searcher: Speedy, easy-to-use file searcher, like grep. Use with ag command"
 	echo "- yarn: Alternative package manager for Node. Installed without Node to use nvm"
 	brew install\
@@ -25,6 +26,7 @@
 			nvm\
 			mercurial\
 			httpie\
+			jq\
 			the_silver_searcher
 	retval=$?
 	if [ $retval -ne 0 ]; then
