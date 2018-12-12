@@ -1,7 +1,7 @@
 {
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontFamily": "Input Mono Narrow",
-    "editor.fontWeight": "100",
+    "editor.fontWeight": "400",
     "editor.fontSize": 12,
     "editor.minimap.enabled": false,
     "editor.lineHeight": 20,
