@@ -13,6 +13,7 @@
 	echo "- nvm: Node version manager"
 	echo "- mercurial: Version control program, necessary for Go Version Manager (gvm)"
 	echo "- httpie: Command line HTTP client, alternative to curl/Postman"
+	echo "- yarn: Alternative package manager for Node. Installed without Node to use nvm"
 	brew install\
 			zsh\
 			antigen\
@@ -23,6 +24,13 @@
 			nvm\
 			mercurial\
 			httpie
+	retval=$?
+	if [ $retval -ne 0 ]; then
+		echo "Installing packages failed with code $retval"
+		exit 1
+	fi
+
+	brew install yarn --without-node
 
 	retval=$?
 	if [ $retval -ne 0 ]; then
