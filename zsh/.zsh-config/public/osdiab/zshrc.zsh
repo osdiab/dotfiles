@@ -21,6 +21,10 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 
 eval "$(hub alias -s)"  # Alias hub as git
 
+# alt + arrows jumps words
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
 #############################
 # Language version managers #
 #############################
