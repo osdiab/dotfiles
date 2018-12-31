@@ -20,5 +20,9 @@
     "rewrap.wrappingColumn": 80,
     "go.formatTool": "gofmt",
     "go.useLanguageServer": true,
-    "prettier.eslintIntegration": true
+    "prettier.eslintIntegration": true,
+    "editor.formatOnSave": true,
+    "rewrap.autoWrap.enabled": true,
+    "rewrap.doubleSentenceSpacing": true,
+    "rewrap.reformat": true
 }
