@@ -38,7 +38,7 @@ export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 pyenv virtualenvwrapper
 
 # Golang: Setup gvm
-source "$HOME/.gvm/scripts/gvm"
+# source "$HOME/.gvm/scripts/gvm"
 
 # Node: Setup nvm
 export NVM_DIR="$HOME/.nvm"
@@ -74,3 +74,6 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/opt/libpq/bin
+export PATH=$PATH:"/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
+

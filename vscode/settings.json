@@ -1,28 +1,50 @@
 {
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "Input Mono Narrow",
-    "editor.fontWeight": "400",
-    "editor.fontSize": 12,
-    "editor.minimap.enabled": false,
-    "editor.lineHeight": 20,
-    "editor.tabSize": 2,
-    "editor.rulers": [
-        80,
-        100
-    ],
-    "editor.renderIndentGuides": false,
-    "files.trimTrailingWhitespace": true,
-    "vim.useSystemClipboard": true,
-    "vim.textwidth": 100,
-    "window.zoomLevel": 0,
-    "eslint.autoFixOnSave": true,
-    "tslint.autoFixOnSave": true,
-    "rewrap.wrappingColumn": 80,
-    "go.formatTool": "gofmt",
-    "go.useLanguageServer": true,
-    "prettier.eslintIntegration": true,
-    "editor.formatOnSave": true,
-    "rewrap.autoWrap.enabled": true,
-    "rewrap.doubleSentenceSpacing": true,
-    "rewrap.reformat": true
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "Victor Mono",
+  "editor.fontWeight": "500",
+  "editor.fontSize": 14,
+  "editor.minimap.enabled": false,
+  "editor.lineHeight": 20,
+  "editor.tabSize": 2,
+  "editor.rulers": [
+    80,
+    100
+  ],
+  "editor.fontLigatures": true,
+  "workbench.colorTheme": "Monokai",
+  "files.trimTrailingWhitespace": true,
+  "vim.useSystemClipboard": true,
+  "vim.textwidth": 100,
+  "window.zoomLevel": 0,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ],
+  "rewrap.wrappingColumn": 80,
+  "go.formatTool": "gofmt",
+  "go.useLanguageServer": true,
+  "rewrap.autoWrap.enabled": true,
+  "rewrap.doubleSentenceSpacing": true,
+  "rewrap.reformat": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "eslint.alwaysShowStatus": true,
+  "eslint.packageManager": "yarn",
+  // "guides.indent.backgrounds": [
+  //   "rgba(256, 0, 0, 0.05)",
+  //   "rgba(0, 256, 0, 0.035)",
+  //   "rgba(0, 0, 256, 0.05)"
+  // ],
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.settings.editor": "json"
 }

@@ -94,7 +94,7 @@ add-zsh-hook chpwd load-nvmrc
 alias https='http --default-scheme=https'
 
 # vscode shortcut
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+# code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;
 
 # In a folder full of git directories, call git pull on all of them.
 pullall() {
