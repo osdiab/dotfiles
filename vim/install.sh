@@ -19,8 +19,10 @@
     mkdir -p ~/.vim/backup
     mkdir -p ~/.local/share/nvim/tmp
     mkdir -p ~/.local/share/nvim/backup
+    NVIM_CONFIG_DIR="$HOME/.config/nvim"
+    mkdir -p $NVIM_CONFIG_DIR
 
     DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
-    ln -s "$DIR/.vimrc" "$HOME/.config/nvim/init.vim"
+    ln -s "$DIR/.vimrc" "$NVIM_CONFIG_DIR/init.vim"
     ln -s "$DIR/.vimrc" "$HOME/.vimrc"
 )
