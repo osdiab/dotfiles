@@ -26,6 +26,32 @@ bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
 #############################
+# Language package managers #
+#############################
+
+# Setup JS
+$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:
+
+# Setup rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Setup Android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Setup go
+export PATH=$PATH:$GOPATH/bin
+
+# Setup postgres
+export PATH=$PATH:/usr/local/opt/libpq/bin
+
+# Setup VSCode
+export PATH=$PATH:"/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
+
+#############################
 # Language version managers #
 #############################
 
@@ -64,16 +90,5 @@ source "$ZSH_CONFIG/public/osdiab/utilities.zsh"
 # source "$ZSH_CONFIG/personal/env-vars.zsh"
 # source "$ZSH_CONFIG/personal/project-helpers.zsh"
 
-#####################
-# Add stuff to path #
-#####################
-
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/usr/local/opt/libpq/bin
-export PATH=$PATH:"/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
-
+# direnv
+eval "$(direnv hook zsh)"
