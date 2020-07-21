@@ -5,9 +5,9 @@
 set nocompatible
 
 if has('nvim')
-  call plug#begin('~/.config/nvim/bundle')
+  call plug#begin(stdpath('data') . '/plugged')
 else
-  call plug#begin('~/.vim/bundle')
+  call plug#begin('~/.vim/plugged')
 endif
 
 Plug 'kamwitsta/flatwhite-vim' " theme

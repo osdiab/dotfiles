@@ -1,4 +1,4 @@
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export ZSH_CONFIG="$HOME/.zsh-config"
 
 #############
@@ -30,7 +30,7 @@ bindkey "^[[1;3D" backward-word
 #############################
 
 # Setup JS
-$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Setup rust
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -85,10 +85,8 @@ source /usr/local/share/chxcode/auto
 ##############################
 
 # Import configs
-source "$ZSH_CONFIG/public/osdiab/utilities.zsh"
+source "$(dirname $0:A)/utilities.zsh"
 # Personal configs, customize for yourself
 # source "$ZSH_CONFIG/personal/env-vars.zsh"
 # source "$ZSH_CONFIG/personal/project-helpers.zsh"
 
-# direnv
-eval "$(direnv hook zsh)"
