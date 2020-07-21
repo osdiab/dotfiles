@@ -24,5 +24,6 @@
 
     DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
     ln -s "$DIR/.vimrc" "$NVIM_CONFIG_DIR/init.vim"
+    ln -s "$DIR/plugins.vim" "$NVIM_CONFIG_DIR/plugins.vim"
     ln -s "$DIR/.vimrc" "$HOME/.vimrc"
 )

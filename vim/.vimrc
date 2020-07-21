@@ -1,27 +1,36 @@
+" map leader key more convenient
+let mapleader = ","
+
+source ~/.config/nvim/plugins.vim
+
 " Set mac clipboard
 set clipboard=unnamedplus
+
+set termguicolors  " full color support
+set background = "light" " to inform light theme to plugins like airline
+colorscheme flatwhite
+" setting background causes underline to disappear
+" https://github.com/neoclide/coc.nvim/issues/755
+hi default CocUnderline cterm=bold,undercurl ctermfg=red gui=bold,undercurl guifg=red
+
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-" Ignore case when searching
-set ignorecase
-
-" When searching try to be smart about cases
-set smartcase
+set ignorecase " Ignore case when searching
+set smartcase " lowercase = case insensitive in searches
 
 " Makes search act like search in modern browsers
 set incsearch
 
-
 if !exists('g:vscode')
   " General {{{
 
-  " 256 colors
-  set t_Co=256
-
   " syntax highlighting
   syntax enable
+
+  " text width
+  set textwidth=120
 
   " Use indentation for folds
   set foldmethod=indent
@@ -45,84 +54,6 @@ if !exists('g:vscode')
   " Set to auto read when a file is changed from the outside
   set autoread
 
-  " vim-plug {{{
-
-  set nocompatible
-
-  if has('nvim')
-    call plug#begin('~/.config/nvim/bundle')
-  else
-    call plug#begin('~/.vim/bundle')
-  endif
-
-  " git
-  Plug 'vim-scripts/gitignore'
-
-  " Styling
-  Plug 'nathanaelkane/vim-indent-guides'
-  Plug 'scrooloose/nerdtree'
-  Plug 'bling/vim-airline'
-  let g:airline_powerline_fonts = 1
-  Plug 'miyakogi/conoline.vim'
-  let g:conoline_color_normal_light = 'ctermbg=236'
-  let g:conoline_color_normal_nr_light = 'ctermbg=236'
-  let g:conoline_color_insert_light = 'ctermbg=234'
-  let g:conoline_color_insert_nr_light = 'ctermbg=234'
-
-  " Text manipulation
-  Plug 'ervandew/supertab'
-  Plug 'simnalamburt/vim-mundo'
-  Plug 'tpope/vim-commentary'
-  Plug 'michaeljsmith/vim-indent-object'
-  Plug 'easymotion/vim-easymotion'
-  Plug 'tpope/vim-sleuth'
-  Plug 'tpope/vim-abolish'
-  Plug 'Yggdroot/indentLine'
-  let g:indentLine_color_term = 239
-
-  " Markdown
-  Plug 'plasticboy/vim-markdown'
-  let g:vim_markdown_conceal = 0
-
-  " Rust
-  Plug 'rust-lang/rust.vim'
-
-  " Go
-  Plug 'fatih/vim-go'
-
-  " Javascript
-  Plug 'elzr/vim-json'
-  let g:vim_json_syntax_conceal = 0
-  Plug 'kern/vim-es7'
-  Plug 'mxw/vim-jsx'
-
-  " Typescript
-  " Plug 'Quramy/tsuquyomi'
-  Plug 'leafgarland/typescript-vim'
-
-  " Thrift
-  Plug 'solarnz/thrift.vim'
-
-  " Actionscript (Flash)
-  Plug 'jeroenbourgois/vim-actionscript'
-
-  " Cross-environment linting
-  Plug 'scrooloose/syntastic'
-  let g:syntastic_mode_map={ 'passive_filetypes': ['go'] }
-  let g:syntastic_filetype_map = { "less": "css" }
-  let g:syntastic_css_checkers=['stylelint']
-  let g:syntastic_javascript_checkers=['eslint']
-  let g:syntastic_coffeescript_checkers=['coffee', 'coffeelint']
-  let g:syntastic_typescript_checkers=['tsc', 'tslint', 'eslint']
-  let g:syntastic_typescript_tsc_fname = ''
-  let g:syntastic_python_checkers=['flake8']
-  let g:syntastic_ruby_checkers=['mri', 'rubocop']
-  let g:syntastic_go_checkers=['go', 'gofmt', 'golint', 'govet']
-
-  call plug#end()
-
-  " }}}
-
   " VIM user interface {{{
 
   " Set 7 lines to the cursor - when moving vertically using j/k
@@ -136,6 +67,11 @@ if !exists('g:vscode')
   " Always show current position
   set ruler
   set number
+
+  " error for long lines
+  match ErrorMsg '\%>80v.\+'
+  " highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+  " match OverLength /\%121v.\+/
 
   " Show trailing whitespace
   set list
@@ -310,37 +246,14 @@ if !exists('g:vscode')
 
   " }}}
 
-  " NERDTree {{{
-
-  " Ctrl-n toggles nerdtree
-  map <C-n> :NERDTreeFind<CR>
-
-  " nerdtree starts on enter
-  autocmd StdinReadPre * let s:std_in=1
-  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-  " close vim if nerdtree is only thing open
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-  " Close nerdtree after a file is selected
-  let NERDTreeQuitOnOpen = 1
-
-  function! IsNERDTreeOpen()
-    return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-  endfunction
-
-  function! ToggleFindNerd()
-    if IsNERDTreeOpen()
-      exec ':NERDTreeToggle'
-    else
-      exec ':NERDTreeFind'
-    endif
-  endfunction
-
-  " If nerd tree is closed, find current file, if open, close it
-  nmap <silent> <leader>f <ESC>:call ToggleFindNerd()<CR>
-  nmap <silent> <leader>F <ESC>:NERDTreeToggle<CR>
-
-  " }}}
-
+" }}}
 endif
+
+" Allow specific project config
+
+set exrc
+set secure
+
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#e4ddd2
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#f1ece4
