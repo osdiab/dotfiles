@@ -9,6 +9,12 @@
   "$SCRIPTPATH/install.sh"
   echo "/n/n"
 
+  echo "~~~~~~~~~~~~~~~~~~~~~"
+  echo "Installing git config"
+  echo "~~~~~~~~~~~~~~~~~~~~~"
+  "$SCRIPTPATH/git.sh"
+  echo "/n/n"
+
   echo "~~~~~~~~~~~~~~~~~~~"
   echo "Installing zsh deps"
   echo "~~~~~~~~~~~~~~~~~~~"
