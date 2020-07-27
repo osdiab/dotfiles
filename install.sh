@@ -107,3 +107,6 @@ echo "\n\n"
 
 echo "Run the following commands afterwards:"
 echo "$ open /usr/local/Caskroom/battle-net/latest/Battle.net-Setup.app"
+
+echo "\n\n"
+echo "and open the link in divvy-shortcuts.txt to install Divvy config"
