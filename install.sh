@@ -107,6 +107,7 @@ echo "\n\n"
 
 echo "Run the following commands afterwards:"
 echo "$ open /usr/local/Caskroom/battle-net/latest/Battle.net-Setup.app"
+echo "$ open /usr/local/Caskroom/little-snitch/4.5.2/LittleSnitch-4.5.2.dmg"
 
 echo "\n\n"
 echo "and open the link in divvy-shortcuts.txt to install Divvy config"
