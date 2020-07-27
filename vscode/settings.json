@@ -34,5 +34,8 @@
   "workbench.settings.editor": "json",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.lineHeight": 1.5,
+  "debug.console.fontSize": 16
 }
