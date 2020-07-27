@@ -6,6 +6,6 @@ git config --global alias.st status
 git config --global alias.unstage 'reset HEAD --'
 git config --global alias.pushup 'push -u origin HEAD'
 git config --global alias.newbranch 'checkout -b'
-git config --global edit
+git config --global --edit
 # End git
 
