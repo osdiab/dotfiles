@@ -1,5 +1,5 @@
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-export ZSH_CONFIG="$HOME/.zsh-config"
+export ZSH_CONFIG="$HOME/.config/zsh"
 
 #############
 # Zsh setup #
@@ -86,7 +86,5 @@ source /usr/local/share/chxcode/auto
 
 # Import configs
 source "$(dirname $0:A)/utilities.zsh"
-# Personal configs, customize for yourself
-# source "$ZSH_CONFIG/personal/env-vars.zsh"
-# source "$ZSH_CONFIG/personal/project-helpers.zsh"
+source "$ZSH_CONFIG/personal.zsh"
 
