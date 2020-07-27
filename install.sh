@@ -110,4 +110,5 @@ echo "$ open /usr/local/Caskroom/battle-net/latest/Battle.net-Setup.app"
 echo "$ open /usr/local/Caskroom/little-snitch/4.5.2/LittleSnitch-4.5.2.dmg"
 
 echo "\n\n"
-echo "and open the link in divvy-shortcuts.txt to install Divvy config"
+echo "Also, open the link in divvy-shortcuts.txt to install Divvy config"
+echo "Plus, open the App Store and install any other missing apps."
