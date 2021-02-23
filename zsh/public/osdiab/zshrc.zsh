@@ -1,4 +1,4 @@
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+eval $(/opt/homebrew/bin/brew shellenv)
 export ZSH_CONFIG="$HOME/.config/zsh"
 
 #############

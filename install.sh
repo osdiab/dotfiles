@@ -3,12 +3,13 @@ echo "Installing brew..."
 echo "=================="
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-# install casks
+echo "======================="
+echo "Installing brew deps..."
+echo "======================="
+brew tap klaaspieter/formula
+brew tap heroku/brew
 
-echo "==================="
-echo "Installing casks..."
-echo "==================="
-brew install --cask\
+brew install\
 	1password\
 	docker\
 	keka\
@@ -51,17 +52,7 @@ brew install --cask\
 	minecraft\
 	divvy\
 	native-access\
-	spotify
-
-echo "\n\n"
-
-echo "======================="
-echo "Installing cli tools..."
-echo "======================="
-brew tap klaaspieter/formula
-brew tap heroku/brew
-
-brew install\
+	spotify\
 	antigen\
 	asdf\
 	cloudflare/cloudflare/cloudflared\
