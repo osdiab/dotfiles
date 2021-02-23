@@ -8,49 +8,48 @@ echo "=================="
 echo "==================="
 echo "Installing casks..."
 echo "==================="
-brew cask install\
+brew install --cask\
 	1password\
-	disk-inventory-x\
+	docker\
 	keka\
 	obs\
-	steam\
+	stay\
 	alfred\
-	divvy\
-	keybase\
-	rekordbox\
-	teamviewer\
-	anki\
-	docker\
-	kindle\
-	signal\
-	the-unarchiver\
-	backblaze\
 	dupeguru\
-	kitty\
-	sketch\
-	transmission\
-	bartender\
+	keybase\
+	qmk-toolbox\
+	steam\
+	authy\
 	firefox\
-	krisp\
-	skype\
-	visual-studio-code\
+	kindle\
+	rekordbox\
+	teamviewer
+	backblaze\
+	kitty\
+	sequel-ace\
+	the-unarchiver
+	bartender\
+	signal\
+	transmission\
 	battle-net\
 	font-input\
-	little-snitch\
+	sketch\
+	cyberghost-vpn\
+	skype\
+	visual-studio-code
+	deepl\
+	google-chrome\
+	logitech-options\
 	slack\
 	vlc\
-	cyberghost-vpn\
-	google-chrome\
-	loom\
-	soundflower\
-	xld\
-	deepl\
-	handbrake\
-	minecraft\
-	soundflowerbed\
-	zulip\
 	discord\
+	handbrake\
+	loom\
+	xld\
+	disk-inventory-x\
 	imageoptim\
+	minecraft\
+	divvy\
 	native-access\
 	spotify
 
@@ -63,51 +62,34 @@ brew tap klaaspieter/formula
 brew tap heroku/brew
 
 brew install\
-	hub\
-	httpie\
-	ripgrep\
-	nvim\
-	postgres\
-	coreutils\
 	antigen\
-	pyenv\
-	pyenv-virtualenv\
-	pyenv-virtualenvwrapper\
-	nvm\
-	mercurial\
+	asdf\
+	cloudflare/cloudflare/cloudflared\
+	gh\
+	heroku/brew/heroku\
 	httpie\
+	hub\
 	jq\
-	jabba\
-	chxcode\
-	heroku
-
-echo "\n\n"
-
-echo "=================="
-echo "Installing yarn..."
-echo "=================="
-curl -o- -L https://yarnpkg.com/install.sh | bash
-
-echo "\n\n"
-
-echo "================="
-echo "Installing rvm..."
-echo "================="
-gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-\curl -sSL https://get.rvm.io | bash
-
-echo "\n\n"
-
-echo "================="
-echo "Installing gvm..."
-echo "================="
-\curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer
+	klaaspieter/formula/chxcode\
+	koekeishiya/formulae/skhd\
+	koekeishiya/formulae/yabai\
+	magic-wormhole\
+	mercurial\
+	mpv\
+	neovim\
+	postgis\
+	python@3.8\
+	redis\
+	ripgrep\
+	sd\
+	watchman\
+	yarn
 
 echo "\n\n"
 
 echo "Run the following commands afterwards:"
 echo "$ open /usr/local/Caskroom/battle-net/latest/Battle.net-Setup.app"
-echo "$ open /usr/local/Caskroom/little-snitch/4.5.2/LittleSnitch-4.5.2.dmg"
+echo "$ open /usr/local/Caskroom/backblaze/7.0.1.452/Backblaze Installer.app"
 
 echo "\n\n"
 echo "Also, open the link in divvy-shortcuts.txt to install Divvy config"
