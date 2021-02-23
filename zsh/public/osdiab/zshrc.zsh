@@ -55,30 +55,8 @@ export PATH=$PATH:"/Applications/Visual Studio Code - Insiders.app/Contents/Reso
 # Language version managers #
 #############################
 
-# Setup pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-pyenv virtualenvwrapper
-
-# Golang: Setup gvm
-# source "$HOME/.gvm/scripts/gvm"
-
-# Node: Setup nvm
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-
-# Ruby: Setup rvm
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# Java: Setup jabba
-[ -s "/Users/omar/.jabba/jabba.sh" ] && source "/Users/omar/.jabba/jabba.sh"
-
-# XCode: Setup chxcode
-source /usr/local/share/chxcode/chxcode
-source /usr/local/share/chxcode/auto
+# ASDF: Setup asdf
+. $(brew --prefix asdf)/asdf.sh
 
 ##############################
 # External ZSH configuration #
