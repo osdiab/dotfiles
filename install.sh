@@ -8,6 +8,7 @@ echo "Installing brew deps..."
 echo "======================="
 brew tap klaaspieter/formula
 brew tap heroku/brew
+brew tap homebrew/cask-drivers
 
 brew install\
 	1password\
@@ -24,11 +25,11 @@ brew install\
 	firefox\
 	kindle\
 	rekordbox\
-	teamviewer
+	teamviewer\
 	backblaze\
 	kitty\
 	sequel-ace\
-	the-unarchiver
+	the-unarchiver\
 	bartender\
 	signal\
 	transmission\
@@ -37,7 +38,7 @@ brew install\
 	sketch\
 	cyberghost-vpn\
 	skype\
-	visual-studio-code
+	visual-studio-code\
 	deepl\
 	google-chrome\
 	logitech-options\
