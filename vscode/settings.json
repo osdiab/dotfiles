@@ -5,37 +5,21 @@
   "editor.minimap.enabled": false,
   "editor.lineHeight": 24,
   "editor.tabSize": 2,
-  "editor.rulers": [
-    80,
-    100
-  ],
+  "editor.rulers": [80],
   "editor.fontLigatures": true,
   "workbench.colorTheme": "Monokai",
   "files.trimTrailingWhitespace": true,
   "vim.useSystemClipboard": true,
-  "vim.textwidth": 100,
-  "window.zoomLevel": 0,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "vim.textwidth": 80,
   "rewrap.wrappingColumn": 80,
   "rewrap.autoWrap.enabled": true,
   "rewrap.doubleSentenceSpacing": true,
   "rewrap.reformat": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "eslint.alwaysShowStatus": true,
-  "eslint.packageManager": "yarn",
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
   "workbench.settings.editor": "json",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.lineHeight": 1.5,
-  "debug.console.fontSize": 16
+  "debug.console.fontSize": 16,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": -1
 }

@@ -1,3 +1,12 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhistcnt =1
-let g:netrw_dirhist_1='/Users/omardiab/code/personal/dotfiles/kitty/kitty'
+let g:netrw_dirhist_1='/Users/omardiab/code/every.org/donate-button/packages/donate-button'
+let g:netrw_dirhist_0='/Users/omardiab/code/every.org/every.org/scripts'
+let g:netrw_dirhist_9='/Users/omardiab/code/every.org/every.org/packages/website-next/.vercel'
+let g:netrw_dirhist_8='/Users/omardiab/code/every.org/donate-button/src/EveryMonth'
+let g:netrw_dirhist_7='/Users/omardiab/code/every.org/every.org/.yarn'
+let g:netrw_dirhist_6='/Users/omardiab/code/every.org/every.org/packages/api'
+let g:netrw_dirhist_5='/Users/omardiab/code/every.org/every.org/packages/website/src/@app/components/donate'
+let g:netrw_dirhist_4='/Users/omardiab/code/every.org/every.org/packages/website/workers-site'
+let g:netrw_dirhist_3='/Users/omardiab/code/open-source/io-ts-types/.git'
+let g:netrw_dirhist_2='/Users/omardiab/code/every.org/every.org/node_modules/newrelic/lib/config'

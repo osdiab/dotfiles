@@ -7,8 +7,15 @@ source ~/.config/nvim/plugins.vim
 set clipboard=unnamedplus
 
 set termguicolors  " full color support
-set background = "light" " to inform light theme to plugins like airline
+set background=light " to inform light theme to plugins like airline
 colorscheme flatwhite
+highlight Cursor guifg=white guibg=gray
+highlight iCursor guifg=white guibg=steelblue
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait10
+
 " setting background causes underline to disappear
 " https://github.com/neoclide/coc.nvim/issues/755
 hi default CocUnderline cterm=bold,undercurl ctermfg=red gui=bold,undercurl guifg=red
@@ -166,7 +173,11 @@ if !exists('g:vscode')
   " }}}
 
   " Text, tab and indent related {{{
-  set tabstop=4
+  set noexpandtab
+  set autoindent
+  set smarttab
+  set tabstop=2
+  set shiftwidth=0
 
   " Linebreak on 100 characters
   set lbr
