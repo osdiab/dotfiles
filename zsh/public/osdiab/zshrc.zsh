@@ -6,7 +6,7 @@ export ZSH_CONFIG="$HOME/.config/zsh"
 #############
 
 # Install antigen first. `brew install antigen`
-source /usr/local/share/antigen/antigen.zsh
+source /opt/homebrew/share/antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle git
 antigen theme oskarkrawczyk/honukai-iterm-zsh honukai
@@ -45,8 +45,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Setup go
 export PATH=$PATH:$GOPATH/bin
 
-# Setup postgres
-export PATH=$PATH:/usr/local/opt/libpq/bin
+# Setup postgres @11 due to heroku/postgres bug atm
+# https://github.com/thoughtbot/parity/issues/175
+export PATH="/opt/homebrew/opt/postgresql@11/bin:$PATH"
 
 # Setup VSCode
 export PATH=$PATH:"/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
