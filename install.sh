@@ -9,8 +9,10 @@ echo "======================="
 brew tap klaaspieter/formula
 brew tap heroku/brew
 brew tap homebrew/cask-drivers
+brew tap homebrew/cask-fonts
 
-brew install\
+# install casks
+arch -arm64 brew install --cask
 	1password\
 	docker\
 	keka\
@@ -26,7 +28,6 @@ brew install\
 	kindle\
 	rekordbox\
 	teamviewer\
-	backblaze\
 	kitty\
 	sequel-ace\
 	the-unarchiver\
@@ -53,7 +54,9 @@ brew install\
 	minecraft\
 	divvy\
 	native-access\
-	spotify\
+	spotify
+
+arch -arm64 brew install\
 	antigen\
 	asdf\
 	cloudflare/cloudflare/cloudflared\
@@ -79,9 +82,8 @@ brew install\
 
 echo "\n\n"
 
-echo "Run the following commands afterwards:"
-echo "$ open /usr/local/Caskroom/battle-net/latest/Battle.net-Setup.app"
-echo "$ open /usr/local/Caskroom/backblaze/7.0.1.452/Backblaze Installer.app"
+open /opt/homebrew/Caskroom/battle-net/latest/Battle.net-Setup.app
+open /opt/homebrew/Caskroom/backblaze/*/Backblaze\ Installer.app
 
 echo "\n\n"
 echo "Also, open the link in divvy-shortcuts.txt to install Divvy config"
