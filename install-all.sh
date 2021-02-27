@@ -32,10 +32,4 @@
   echo "~~~~~~~~~~~~~~~~~~~~~~"
   "$SCRIPTPATH/vim/install.sh"
   echo "/n/n"
-
-  echo "~~~~~~~~~~~~~~~~~~~~~~~~"
-  echo "Installing vscode config"
-  echo "~~~~~~~~~~~~~~~~~~~~~~~~"
-  "$SCRIPTPATH/vscode/install.sh"
-  echo "/n/n"
 )
