@@ -19,6 +19,7 @@ yabai -m rule --add app="^1Password" manage=off
 yabai -m rule --add app="^DeepL$" manage=off
 yabai -m rule --add app="^Traktor" manage=off
 yabai -m rule --add app="^System Preferences" manage=off
+yabai -m rule --add app="^Loom" manage=off
 
 # global settings
 yabai -m config mouse_follows_focus          off
