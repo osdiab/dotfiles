@@ -3,6 +3,11 @@ echo "Installing brew..."
 echo "=================="
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+echo "=========================="
+echo "Installing Rosetta brew..."
+echo "=========================="
+arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
 echo "======================="
 echo "Installing brew deps..."
 echo "======================="
