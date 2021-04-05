@@ -26,4 +26,16 @@
   echo "~~~~~~~~~~~~~~~~~~~~~~"
   "$SCRIPTPATH/vim/install.sh"
   echo "/n/n"
+
+  echo "~~~~~~~~~~~~~~~~~~~~~~"
+  echo "Installing tmux config"
+  echo "~~~~~~~~~~~~~~~~~~~~~~"
+  "$SCRIPTPATH/tmux/install.sh"
+  echo "/n/n"
+
+  echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  echo "Installing alacritty config"
+  echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  "$SCRIPTPATH/alacritty/install.sh"
+  echo "/n/n"
 )
