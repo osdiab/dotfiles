@@ -77,10 +77,14 @@ arch -arm64 brew install\
 	redis\
 	ripgrep\
 	sd\
+	tmux\
 	watchman\
 	yarn
 
 echo "\n\n"
+
+# allow vscode to key-repeat
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
 open /opt/homebrew/Caskroom/battle-net/latest/Battle.net-Setup.app
 open /opt/homebrew/Caskroom/backblaze/*/Backblaze\ Installer.app
