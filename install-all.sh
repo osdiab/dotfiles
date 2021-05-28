@@ -21,6 +21,12 @@
   "$SCRIPTPATH/zsh/install.sh"
   echo "/n/n"
 
+  echo "~~~~~~~~~~~~~~~~~~~~~~~"
+  echo "Installing kitty config"
+  echo "~~~~~~~~~~~~~~~~~~~~~~~"
+  "$SCRIPTPATH/kitty/install.sh"
+  echo "/n/n"
+
   echo "~~~~~~~~~~~~~~~~~~~~~~"
   echo "Installing nvim config"
   echo "~~~~~~~~~~~~~~~~~~~~~~"
