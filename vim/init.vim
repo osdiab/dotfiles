@@ -144,8 +144,8 @@ if !exists('g:vscode')
   set backupcopy=yes " allows webpack watch to work properly, by writing directly to file instead of replacing it
   set backup
   if has('nvim')
-    set backupdir=~/.vim/backup
-    set directory=~/.vim/tmp
+    set backupdir=~/.nvim/backup
+    set directory=~/.nvim/tmp
   else
     set backupdir=~/.local/share/nvim/backup
     set directory=~/.local/share/nvim/tmp
