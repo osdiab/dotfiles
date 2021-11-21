@@ -80,6 +80,7 @@ brew install\
 	hub\
 	imagemagick\
 	jq\
+	libpq\
 	magic-wormhole\
 	neovim\
 	pwgen\
