@@ -25,3 +25,9 @@ notif () {
   DEFAULT_TITLE="Terminal"
   osascript -e "display notification \"$1\" with title \"${2:-$DEFAULT_TITLE}\""
 }
+alert() {
+  DEFAULT_TITLE="Terminal"
+  osascript -e "display alert \"${1:-$DEFAULT_TITLE}\" message \"$2\""
+}
+
+alias ta='tmux attach -t'

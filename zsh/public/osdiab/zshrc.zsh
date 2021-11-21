@@ -57,7 +57,7 @@ export PATH=$PATH:"/Applications/Visual Studio Code - Insiders.app/Contents/Reso
 #############################
 
 # ASDF: Setup asdf
-. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
 
 ##############################
 # External ZSH configuration #
@@ -67,3 +67,9 @@ export PATH=$PATH:"/Applications/Visual Studio Code - Insiders.app/Contents/Reso
 source "$(dirname $0:A)/utilities.zsh"
 source "$ZSH_CONFIG/personal.zsh"
 
+
+# Google Cloud
+# completions
+source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+# cli tool in PATH
+source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
