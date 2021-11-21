@@ -11,4 +11,6 @@
 
     DIR="$( dirname "$( realpath "$0" )" )"
     ln -s "$DIR" "$NVIM_CONFIG_DIR"
+
+    vim -c ":PlugInstall"
 )
