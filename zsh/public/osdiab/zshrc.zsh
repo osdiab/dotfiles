@@ -29,6 +29,9 @@ bindkey "^[[1;3D" backward-word
 # Language package managers #
 #############################
 
+# Setup Postgres
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
 # Setup JS
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
