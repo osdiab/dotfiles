@@ -3,88 +3,93 @@ echo "Installing brew..."
 echo "=================="
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-echo "=========================="
-echo "Installing Rosetta brew..."
-echo "=========================="
-arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+echo "====================="
+echo "Installing Rosetta..."
+echo "====================="
+sudo softwareupdate --install-rosetta
 
 echo "======================="
 echo "Installing brew deps..."
 echo "======================="
-brew tap klaaspieter/formula
-brew tap heroku/brew
 brew tap homebrew/cask-drivers
 brew tap homebrew/cask-fonts
 
 # install casks
-arch -arm64 brew install --cask
+brew install\
 	1password\
-	docker\
-	keka\
+	google-chrome\
 	obs\
-	stay\
-	alfred\
-	dupeguru\
-	keybase\
-	qmk-toolbox\
-	steam\
+	amethyst\
+	google-cloud-sdk\
+	obsidian\
+	audio-hijack\
+	google-drive\
 	authy\
-	firefox\
+	qmk-toolbox\
+	bartender\
+	raycast\
+	battle-net\
 	kindle\
 	rekordbox\
-	teamviewer\
 	kitty\
-	sequel-ace\
-	the-unarchiver\
-	bartender\
+	krisp\
 	signal\
-	transmission\
-	battle-net\
-	font-input\
-	sketch\
-	cyberghost-vpn\
+	linear-linear\
 	skype\
-	visual-studio-code\
 	deepl\
-	google-chrome\
-	logitech-options\
+	logitech-camera-settings\
 	slack\
-	vlc\
 	discord\
-	handbrake\
-	loom\
-	xld\
+	soundsource\
 	disk-inventory-x\
-	imageoptim\
-	minecraft\
-	divvy\
+	spotify\
+	stay\
+	docker\
+	loom\
+	steam\
+	loopback\
+	teamviewer\
+	the-unarchiver\
+	farrago\
+	transmission\
+	figma\
+	microsoft-teams\
+	firefox\
+	vlc\
+	fission\
+	xld\
+	focusrite-control\
 	native-access\
-	spotify
+	zoom\
+	font-input\
+	ngrok\
+	notion\
+	anki\
+	microsoft-excel\
+	microsoft-powerpoint
 
-arch -arm64 brew install\
+brew install\
 	antigen\
 	asdf\
-	cloudflare/cloudflare/cloudflared\
-	gh\
-	heroku/brew/heroku\
+	dopplerhq/cli/doppler\
+	ffmpeg\
+	git\
+	gnupg\
+	hasura-cli\
 	httpie\
 	hub\
+	imagemagick\
 	jq\
-	klaaspieter/formula/chxcode\
-	koekeishiya/formulae/skhd\
-	koekeishiya/formulae/yabai\
 	magic-wormhole\
-	mercurial\
-	mpv\
 	neovim\
-	postgis\
-	python@3.8\
-	redis\
+	pwgen\
 	ripgrep\
-	sd\
-	tmux\
+	rsync\
 	watchman\
 	yarn
+
+
+echo "Also, open the link in divvy-shortcuts.txt to install Divvy config"
 
 echo "\n\n"
 
@@ -92,8 +97,6 @@ echo "\n\n"
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
 open /opt/homebrew/Caskroom/battle-net/latest/Battle.net-Setup.app
-open /opt/homebrew/Caskroom/backblaze/*/Backblaze\ Installer.app
 
 echo "\n\n"
-echo "Also, open the link in divvy-shortcuts.txt to install Divvy config"
 echo "Plus, open the App Store and install any other missing apps."
