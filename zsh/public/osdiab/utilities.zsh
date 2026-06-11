@@ -4,11 +4,6 @@ alias clippy="pbcopy < "
 # convert relative to absolute path
 realpath () { case "$1" in /*)printf "%s\n" "$1";; *)printf "%s\n" "$PWD/$1";; esac; }
 
-export ANDROID_HOME=${HOME}/Library/Android/sdk
-alias adb=$ANDROID_HOME/platform-tools/adb
-alias aapt=$ANDROID_HOME/build-tools/23.0.3/aapt
-alias emulator=$ANDROID_HOME/emulator/emulator
-
 autoload -U add-zsh-hook
 
 # make https requests with httpie
@@ -30,4 +25,6 @@ alert() {
   osascript -e "display alert \"${1:-$DEFAULT_TITLE}\" message \"$2\""
 }
 
-alias ta='tmux attach -t'
+alias gco='git checkout'
+alias gpu='git push -u origin HEAD'
+alias lg='lazygit'
